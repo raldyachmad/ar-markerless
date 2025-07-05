@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
     <title>Gesture Interactions - A-Frame & AR.js</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../assets/css/style.css">
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="../assets/js/gesture-detector.js"></script>
     <script src="../assets/js/gesture-handler.js"></script>
+    <style>
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+    </style>
   </head>
-    <body>
+  <body>
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-      
       <!-- Kamera -->
-      <a-camera position="0 0 0" look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
+      <a-camera
+        position="0 0 0"
+        look-controls-enabled="false"
+        wasd-controls-enabled="false"
+      ></a-camera>
 
       <!-- Model langsung di depan kamera -->
-      <a-entity 
+      <a-entity
         gltf-model="../assets/3d/Situs.glb"
         position="0 0 -3"
         rotation="0 180 0"
-        scale="1 1 1"
+        scale="0.01 0.01 0.01"
         animation-mixer
       ></a-entity>
-
     </a-scene>
   </body>
 </html>
